@@ -5,13 +5,13 @@
                 <span class="sr-only">Toggle navigation</span>
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
                 <h3 class="images-logo-place"><img src="images/logo/logo-skk.webp" class="images-logo-header" /></h3>
             </a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html#main-slider">Beranda</a></li>
+                <li><a href="/">Beranda</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" href='#' data-toggle="dropdown">Tentang Kami
                       <span class="caret"></span></a>
@@ -21,8 +21,8 @@
                     </ul>
                 </li>
                 <li><a href="daftar-produk.html">Daftar Produk</a></li>
-                <li><a href="mitra.html">Mitra</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="{{ route('mitra') }}">Mitra</a></li>
+                <li><a href="{{ route('kontak') }}">Kontak</a></li>
             </ul>
         </div>
     </div>

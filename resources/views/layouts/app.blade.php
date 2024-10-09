@@ -96,4 +96,48 @@
         .dsa-margin-60 {
             margin-top: 60px;
         }
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                'use strict';
+                jQuery('body').backstretch([
+                    "images/bg/bg.svg"
+                ], {
+                    duration: 5000,
+                    fade: 500,
+                    centeredY: true
+                });
+
+            $("#mapwrapper").gMap({
+                controls: false,
+                scrollwheel: false,
+                zoomControl: true,
+                mapTypeControl: true,
+                scaleControl: true,
+                markers: [{
+                    latitude: -6.935897,
+                    longitude: 107.663816,
+                    icon: {
+                        image: "images/marker.png",
+                        iconsize: [44, 44],
+                        iconanchor: [12, 46],
+                        infowindowanchor: [12, 0]
+                    }
+                }],
+                icon: {
+                    image: "images/marker.png",
+                    iconsize: [26, 46],
+                    iconanchor: [12, 46],
+                    infowindowanchor: [12, 0]
+                },
+                latitude: -6.935897,
+                longitude: 107.663816,
+                zoom: 14
+            });
+        });
+    </script>
+    <style>
+        .opaqued {
+            background-color: rgba(255, 255, 255, 1)!important;
+        }
+    </style>
     </style>
