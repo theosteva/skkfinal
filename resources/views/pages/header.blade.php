@@ -16,11 +16,11 @@
                     <a class="dropdown-toggle" href='#' data-toggle="dropdown">Tentang Kami
                       <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="index.html#about-us">Tentang PT SKK</a></li>
-                        <li><a href="lowongan/index.html">Lowongan Kerja</a></li>
+                        <li><a href="/#about-us">Tentang PT SKK</a></li>
+                        <li><a href="{{ route('lowongan') }}">Lowongan Kerja</a></li>
                     </ul>
                 </li>
-                <li><a href="daftar-produk.html">Daftar Produk</a></li>
+                <li><a href="{{ route('daftar-produk') }}">Daftar Produk</a></li>
                 <li><a href="{{ route('mitra') }}">Mitra</a></li>
                 <li><a href="{{ route('kontak') }}">Kontak</a></li>
             </ul>
