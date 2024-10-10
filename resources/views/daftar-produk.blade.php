@@ -19,170 +19,24 @@
                 </div>
                 <div class="gap"></div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/sicundo.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="https://sicundo.net/dashboard/" target="_blank"><i class="fa fa-link"></i></a>
+                    @php
+                        $products = \App\Models\Product::where('is_active', true)->orderBy('order')->get();
+                    @endphp
+                    @foreach($products as $product)
+                        <div class="col-md-4">
+                            <div class="post">
+                                <div class="post-img-content">
+                                    <img src="{{ asset('storage/' . $product->image) }}" class="img-responsive" alt="{{ $product->name }}" />
+                                    <div class="overlay">
+                                        <a class="preview btn btn-outlined btn-primary" href="{{ $product->link }}" target="_blank"><i class="fa fa-link"></i></a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">SiCUNDO</h2>
-                                <div class="autoheightBody">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/new-image/img-sakti.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="#" target="_blank"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">SAKTI.Online</h2>
-                                <div class="autoheightBody">
-
+                                <div class="content">
+                                    <h2 class="post-title autoheightTitle dsa-center-text">{{ $product->name }}</h2>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/new-image/img-saktilink.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="https://sakti.link" target="_blank"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">SAKTI.Link</h2>
-                                <div class="autoheightBody">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12"></div>
-
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/new-image/img-saktipay.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="#" target="_blank"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">SAKTI.Pay</h2>
-                                <div class="autoheightBody">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/new-image/img-mycoop.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="https://mycoop.id" target="_blank"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">MyCOOP</h2>
-                                <div class="autoheightBody">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/new-image/img-horas.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="https://play.google.com/store/apps/details?id=io.horas.chat" target="_blank"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">HORAS</h2>
-                                <div class="autoheightBody">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/new-image/img-lacimart.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="https://mart.laci.online" target="_blank"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">LACI MART</h2>
-                                <div class="autoheightBody">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/new-image/img-lacikantin.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="https://kantin.laci.online" target="_blank"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">LACI KANTIN</h2>
-                                <div class="autoheightBody">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/new-image/img-awansakti.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="https://awansakti.id/" target="_blank"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">AWAN SAKTI</h2>
-                                <div class="autoheightBody">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="post">
-                            <div class="post-img-content">
-                                <img src="images/portfolio/new-image/img-skasi.png" class="img-responsive" />
-                                <div class="overlay">
-                                    <a class="preview btn btn-outlined btn-primary" href="#" target="_blank"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h2 class="post-title autoheightTitle dsa-center-text">SKASI</h2>
-                                <div class="autoheightBody">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12"></div>
+                    @endforeach
                 </div>
                 <div class="gap"></div>
             </div>
