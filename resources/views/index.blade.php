@@ -8,30 +8,32 @@
 <body>
     @include('pages.header')
 
+    @php
+        $sliders = \App\Models\Slider::where('is_active', true)->orderBy('order')->get();
+    @endphp
+
     <section id="main-slider" class="no-margin background-ms">
         <div class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="item active">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content centered">
-                                    <span class="home-icon bounce-in no-display animated bounceIn appear"></span>
-                                    <h2 class="boxed animation animated-item-1 fade-down">Berkomitmen Mengembangkan Teknologi Koperasi</h2><br>
-                                    <p class="boxed animation animated-item-2 fade-up">PT SKK membantu koperasi-koperasi untuk tumbuh berkembang dengan pemanfaatan teknologi informasi yang tepat guna dan terpercaya, sehingga koperasi-koperasi bisa berkerja dengan tingkat efisiensi yang tinggi. Selain
-                                        itu, koperasi-koperasi bisa saling terhubung satu sama lain demi meningkatkan produktifitasnya.</p>
-                                    <br>
-                                    <a class="btn btn-md animation bounce-in" href="#product">Selengkapnya</a>
+                @foreach($sliders as $index => $slider)
+                    <div class="item {{ $index === 0 ? 'active' : '' }}">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="carousel-content centered">
+                                        <span class="home-icon bounce-in no-display animated bounceIn appear"></span>
+                                        <h2 class="boxed animation animated-item-1 fade-down">{{ $slider->title }}</h2><br>
+                                        <p class="boxed animation animated-item-2 fade-up">{{ $slider->description }}</p>
+                                        <br>
+                                        <a class="btn btn-md animation bounce-in" href="{{ $slider->button_link }}">{{ $slider->button_text }}</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--/.item-->
+                @endforeach
             </div>
-            <!--/.carousel-inner-->
         </div>
-        <!--/.carousel-->
     </section>
     <!--/#main-slider-->
 
